@@ -1,0 +1,19 @@
+[[main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[main]]
+  name = "On Fire (1738)"
+  url = "/docs/fire/"
+  weight = 2
+
+[[main]]
+  name = "Du Châtelet · Dissertation"
+  url = "/fire/chatelet.html"
+  weight = 3
+
+[[main]]
+  name = "Voltaire · Essai"
+  url = "/fire/voltaire.html"
+  weight = 4
