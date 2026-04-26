@@ -46,9 +46,8 @@
   :root { --color-scheme: dark; }
 }
 
-/* Applied by JS toggle OR by OS preference */
-:root.dark,
-@media (prefers-color-scheme: dark) { :root:not(.light) {
+/* Applied by JS toggle */
+:root.dark {
   --parchment:       #1e1810;
   --parchment-dark:  #252018;
   --parchment-deep:  #2c2718;
@@ -69,7 +68,33 @@
 
   --shadow-card:     0 4px 24px rgba(0, 0, 0, 0.40);
   --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.60);
-}}
+}
+
+/* Applied by OS preference (when not manually overridden to light) */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --parchment:       #1e1810;
+    --parchment-dark:  #252018;
+    --parchment-deep:  #2c2718;
+
+    --ink:             #ede0c8;
+    --ink-mid:         #c8b898;
+    --ink-light:       #9a8868;
+
+    --gold:            #d4a040;
+    --gold-hover:      #f0c060;
+    --gold-light:      #e8b840;
+    --gold-pale:       #5a4020;
+    --gold-bg:         #3a2c10;
+
+    --rust:            #e05030;
+    --blue-slate:      #7098c0;
+    --divider:         #3c3020;
+
+    --shadow-card:     0 4px 24px rgba(0, 0, 0, 0.40);
+    --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.60);
+  }
+}
 
 /* ── Reset & Base ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }

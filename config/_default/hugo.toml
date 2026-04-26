@@ -3,13 +3,6 @@ languageCode = "en-us"
 title = "Émilie du Châtelet · Selected Works"
 theme = "minimal"
 
-[pagination]
-  pagerSize = 10
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-
 [markup]
   [markup.tableOfContents]
     endLevel = 4
