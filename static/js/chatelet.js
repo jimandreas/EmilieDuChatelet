@@ -61,36 +61,39 @@
     });
 
     // Keep toggle label in sync when OS preference changes
-    if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-        var stored = null;
-        try { stored = localStorage.getItem(STORAGE_KEY); } catch (_) {}
-        if (!stored) updateToggleLabel(getOsPrefersDark());
-      });
-    }
+    try {
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+          var stored = null;
+          try { stored = localStorage.getItem(STORAGE_KEY); } catch (_) {}
+          if (!stored) updateToggleLabel(getOsPrefersDark());
+        });
+      }
+    } catch (_) {}
 
     // ── View mode toggle ──────────────────────────────────────
     var viewToggle = document.querySelector('.view-toggle');
     var readerContent = document.querySelector('.reader-content');
 
     if (viewToggle && readerContent) {
-      viewToggle.addEventListener('click', function (e) {
-        var btn = e.target.closest('button[data-mode]');
-        if (!btn) return;
-        var mode = btn.dataset.mode;
+      function setMode(mode) {
         viewToggle.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        readerContent.className = readerContent.className.replace(/\bmode-\w+\b/g, '').trim();
+        var activeBtn = viewToggle.querySelector('[data-mode="' + mode + '"]');
+        if (activeBtn) activeBtn.classList.add('active');
+        readerContent.classList.remove('mode-en', 'mode-fr');
         if (mode !== 'parallel') readerContent.classList.add('mode-' + mode);
         try { localStorage.setItem('chatelet-view-mode', mode); } catch (_) {}
+      }
+
+      viewToggle.querySelectorAll('button[data-mode]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setMode(btn.getAttribute('data-mode'));
+        });
       });
 
       try {
         var saved = localStorage.getItem('chatelet-view-mode');
-        if (saved) {
-          var btn = viewToggle.querySelector('[data-mode="' + saved + '"]');
-          if (btn) btn.click();
-        }
+        if (saved && saved !== 'parallel') setMode(saved);
       } catch (_) {}
     }
 
