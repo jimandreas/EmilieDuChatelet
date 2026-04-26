@@ -4,8 +4,10 @@ description: "Bilingual French–English critical editions of Émilie du Châtel
 ---
 
 <figure class="portrait-right">
-  <img src="img/emilie-du-chatelet.jpg" alt="Portrait of Émilie du Châtelet by Maurice Quentin de La Tour, c. 1740">
-  <figcaption>Maurice Quentin de La Tour, c. 1740<br>Public domain</figcaption>
+  <a href="img/emilie-portrait.html" title="View full portrait">
+    <img src="img/emilie-du-chatelet.jpg" alt="Portrait of Émilie du Châtelet by Maurice Quentin de La Tour, c. 1740">
+  </a>
+  <figcaption>La Tour, c. 1740</figcaption>
 </figure>
 
 Gabrielle Émilie Le Tonnelier de Breteuil, Marquise du Châtelet (1706–1749), stands as one of the most formidable intellects of the French Enlightenment. At a time when women were excluded from the academies and universities of Europe, she produced original scientific and philosophical work of lasting importance.

@@ -431,8 +431,7 @@ th {
 .portrait-right {
   float: right;
   margin: 0 0 1.5rem 2rem;
-  width: 220px;
-  max-width: 40%;
+  width: 66px;
 }
 
 .portrait-right img {
