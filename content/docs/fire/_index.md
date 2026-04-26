@@ -30,7 +30,7 @@ The parallel reader shows English on the left and French on the right. A view to
 
 ## On the Translations
 
-The English translations are new scholarly renderings prepared for this edition. They aim to convey the precision of the scientific argument and the formal register of eighteenth-century scientific prose.
+The English translations were prepared for this edition with the assistance of **Claude** (Anthropic), an AI language model, working directly from the French originals. They aim to convey the precision of the scientific argument and the formal register of eighteenth-century scientific prose. Readers are encouraged to verify passages against the linked digitised originals.
 
 An earlier English translation of du Châtelet's essay (Judith Zinsser, trans.) was published in:
-*Selected Philosophical and Scientific Writings*, ed. Judith Zinsser (University of Chicago Press, 2009).
+*Selected Philosophical and Scientific Writings*, ed. Judith Zinsser (University of Chicago Press, 2009), which remains the standard scholarly reference.
