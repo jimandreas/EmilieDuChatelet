@@ -15,9 +15,9 @@ This site presents bilingual editions of her principal scientific writings, with
 
 In 1737 the *Académie royale des sciences* announced its annual prize competition on the nature of fire. Both Voltaire and du Châtelet — sharing a laboratory at Château de Cirey — submitted essays independently. Neither won the prize (awarded to Euler), but both received honourable mention and were published. Du Châtelet thereby became the first woman to have a scientific paper published by the Académie.
 
-- [Competition Overview — The 1738 Prize on Fire](/fire/index.html)
-- [Du Châtelet — *Dissertation sur la nature et la propagation du feu* (1744)](/fire/chatelet.html) · Parallel bilingual edition
-- [Voltaire — *Essai sur la nature du feu et sur sa propagation* (1738)](/fire/voltaire.html) · Parallel bilingual edition
+- [Competition Overview — The 1738 Prize on Fire](fire/index.html)
+- [Du Châtelet — *Dissertation sur la nature et la propagation du feu* (1744)](fire/chatelet.html) · Parallel bilingual edition
+- [Voltaire — *Essai sur la nature du feu et sur sa propagation* (1738)](fire/voltaire.html) · Parallel bilingual edition
 
 ---
 

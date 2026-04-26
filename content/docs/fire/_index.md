@@ -21,8 +21,8 @@ Both essays were published in 1744 by Prault fils (Paris).
 
 | | Essay | Sources |
 |---|---|---|
-| **Du Châtelet** | [*Dissertation sur la nature et la propagation du feu*](/fire/chatelet.html) | [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k756786) · [Gutenberg #73279](https://www.gutenberg.org/ebooks/73279) |
-| **Voltaire** | [*Essai sur la nature du feu et sur sa propagation*](/fire/voltaire.html) | [Wikisource · Garnier 1879](https://fr.wikisource.org/wiki/Essai_sur_la_nature_du_feu_et_sur_sa_propagation/%C3%89dition_Garnier) |
+| **Du Châtelet** | [*Dissertation sur la nature et la propagation du feu*](../../fire/chatelet.html) | [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k756786) · [Gutenberg #73279](https://www.gutenberg.org/ebooks/73279) |
+| **Voltaire** | [*Essai sur la nature du feu et sur sa propagation*](../../fire/voltaire.html) | [Wikisource · Garnier 1879](https://fr.wikisource.org/wiki/Essai_sur_la_nature_du_feu_et_sur_sa_propagation/%C3%89dition_Garnier) |
 
 The parallel reader shows English on the left and French on the right. A view toggle lets you switch to English-only or French-only mode. Page references in the French column link to the specific page in the digitised original.
 
