@@ -3,6 +3,11 @@ title: "Émilie du Châtelet · Selected Works"
 description: "Bilingual French–English critical editions of Émilie du Châtelet's scientific writings."
 ---
 
+<figure class="portrait-right">
+  <img src="img/emilie-du-chatelet.jpg" alt="Portrait of Émilie du Châtelet by Maurice Quentin de La Tour, c. 1740">
+  <figcaption>Maurice Quentin de La Tour, c. 1740<br>Public domain</figcaption>
+</figure>
+
 Gabrielle Émilie Le Tonnelier de Breteuil, Marquise du Châtelet (1706–1749), stands as one of the most formidable intellects of the French Enlightenment. At a time when women were excluded from the academies and universities of Europe, she produced original scientific and philosophical work of lasting importance.
 
 This site presents bilingual editions of her principal scientific writings, with parallel English translations keyed to the original French sources. Each section links back to the digitised primary sources at the [Bibliothèque nationale de France (Gallica)](https://gallica.bnf.fr) and [Project Gutenberg](https://www.gutenberg.org).

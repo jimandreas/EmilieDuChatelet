@@ -427,6 +427,39 @@ th {
   margin-bottom: 1rem;
 }
 
+/* Portrait figure (home page) */
+.portrait-right {
+  float: right;
+  margin: 0 0 1.5rem 2rem;
+  width: 220px;
+  max-width: 40%;
+}
+
+.portrait-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.portrait-right figcaption {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+@media (max-width: 500px) {
+  .portrait-right {
+    float: none;
+    margin: 0 auto 1.5rem;
+    max-width: 60%;
+  }
+}
+
 /* Utility classes */
 .sr-only {
   position: absolute;
