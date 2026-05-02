@@ -11,6 +11,9 @@ hugo server -D
 # Production build (outputs to public/)
 hugo
 
+# CI build (matches GitHub Actions)
+hugo --gc --minify
+
 # Build with verbose output for debugging
 hugo --verbose
 
@@ -18,7 +21,7 @@ hugo --verbose
 hugo new docs/fire/new-work/_index.md
 ```
 
-Hugo v0.100.0+ is required. No npm/Node build step — CSS and JS are hand-authored vanilla files.
+Hugo v0.100.0+ is required (CI uses v0.153.5). No npm/Node build step — CSS and JS are hand-authored vanilla files.
 
 ## Architecture
 
@@ -28,6 +31,8 @@ This is a **Hugo static site** with a hybrid content model:
 - **Pre-built static HTML** (`static/fire/*.html`) holds the scholarly parallel readers. These are complex, hand-crafted bilingual editions that live outside Hugo's templating pipeline entirely. Hugo copies them unchanged into `public/`.
 
 The separation is intentional: parallel readers need rich, custom markup that Hugo's Markdown-to-HTML pipeline can't express cleanly.
+
+Hugo configuration is split across three files in `config/_default/`: `hugo.toml` (baseURL, theme, markup), `params.toml` (author, GitHub URL), `menus.toml` (nav links).
 
 ## Two-Tier Styling
 
@@ -46,14 +51,16 @@ This file is loaded only by the `static/fire/*.html` parallel readers, not by Hu
 
 ## Parallel Reader HTML Structure
 
-The `static/fire/chatelet.html` and `static/fire/voltaire.html` files share a consistent structure:
+`static/fire/` contains three files: `index.html` (competition landing page), `chatelet.html` (du Châtelet parallel reader), `voltaire.html` (Voltaire parallel reader).
+
+The two parallel readers share a consistent structure:
 - Breadcrumb nav + dark-mode toggle button (injected by JS if absent)
 - Sidebar ToC with `<a href="#section-id">` anchors
 - Two-column grid: `.fr-col` (French original) and `.en-col` (English translation)
 - Page markers linking to source scans on Gallica (BnF)
 - View toggle buttons switching CSS classes on `<body>`
 
-When editing these files directly (not via Hugo), use absolute paths for all internal links (`/css/chatelet.css`, `/js/chatelet.js`, not relative paths) because they're served from `public/fire/`.
+**Path prefix:** Because the site is deployed to a GitHub Pages subpath (`/EmilieDuChatelet/`), all internal asset links in these files must include the full prefix: `/EmilieDuChatelet/css/chatelet.css`, `/EmilieDuChatelet/js/chatelet.js`. Plain root-relative paths like `/css/chatelet.css` will 404 on GitHub Pages.
 
 ## Content Model
 
@@ -63,6 +70,10 @@ When editing these files directly (not via Hugo), use absolute paths for all int
 
 All links between Hugo content and the static readers use absolute root-relative paths (e.g., `/fire/chatelet.html`).
 
+## Active Revision Work
+
+`REVISION.md` tracks an ongoing project to replace earlier AI-paraphrased French text in `chatelet.html` with verbatim text from the 1744 Prault edition. The source is `gutenberg_source.txt` (Project Gutenberg #73279, 3,284 lines). Seconde Partie (Sections I–XV + Conclusion) is complete; Première Partie is pending. When editing French text in the parallel reader, prefer verbatim Prault over paraphrase.
+
 ## Deployment
 
-Site deploys to GitHub Pages at `https://jimandreas.github.io/EmilieDuChatelet/`. The `baseURL` in `config/_default/hugo.toml` must match this path. The `public/` directory is the build artifact.
+Site deploys to GitHub Pages at `https://jimandreas.github.io/EmilieDuChatelet/` via `.github/workflows/deploy.yml` on every push to `master`. The `baseURL` in `config/_default/hugo.toml` must match this path.
